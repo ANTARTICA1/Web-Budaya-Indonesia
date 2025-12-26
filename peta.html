@@ -1,0 +1,154 @@
+<!-- Nama: Anak Agung Ngurah Krisna Artha Wibawa
+Kelas: BB244
+NIM: 240040075 -->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peta Budaya Indonesia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brown shadow-lg p-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Kebudayaan Indonesia</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link me-2" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link me-2" href="daftar.html">Daftar Budaya</a></li>
+            <li class="nav-item"><a class="nav-link me-2" href="galeri.html">Galeri</a></li>
+            <li class="nav-item"><a class="nav-link me-2" href="artikel.html">Artikel</a></li>
+            <li class="nav-item"><a class="nav-link active" href="peta.html">Peta Interaktif</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="hero hero-small-peta text-center d-flex align-items-center">
+      <div class="container">
+        <h1 class="fw-bold text-white">Peta Budaya Indonesia</h1>
+        <p class="lead text-white">Informasi kebudaya dalam bentuk peta interaktif</p>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Jelajahi budaya Nusantara melalui peta interaktif</h2>
+        <p class="text-center mb-4 text-muted">Silahkan klik marker yang sudah diberikan</p>
+        <div id="map"></div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      const map = L.map("map").setView([-2.5489, 118.0149], 5);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      const budaya = [
+        {
+          nama: "Tari Kecak",
+          coords: [-8.829, 115.088],
+          deskripsi: "Tari tradisional Bali yang menampilkan suara 'cak' bersahut-sahutan.",
+          gambar: "img/tari-kecak.jpeg",
+        },
+        {
+          nama: "Rumah Gadang",
+          coords: [-0.947, 100.417],
+          deskripsi: "Rumah adat khas Minangkabau dengan atap gonjong yang unik.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/fbojtct8wuo5ljka2vjz.jpg",
+        },
+        {
+          nama: "Tari Saman",
+          coords: [5.556, 95.322],
+          deskripsi: "Tarian harmonis dari Aceh yang dilakukan berkelompok dengan tepukan tangan cepat.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/4050404222.webp",
+        },
+        {
+          nama: "Tari Jaipong",
+          coords: [-6.9147, 107.6098],
+          deskripsi: "Tarian tradisional Sunda yang enerjik dan ekspresif.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/63072e6009aaa.jpg",
+        },
+        {
+          nama: "Rumah Limas",
+          coords: [-3.003, 102.197],
+          deskripsi: "Rumah adat khas Sumatera Selatan dengan atap bertingkat.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/Rumah-Limas-Adat-Sumatera-Selatan-foto-by-gpswisataindonesia.info_.jpg",
+        },
+        {
+          nama: "Tari Reog Ponorogo",
+          coords: [-7.868, 111.468],
+          deskripsi: "Tarian tradisional Jawa Timur yang dramatis dengan topeng besar.",
+          gambar: "img/reogdaftar.webp",
+        },
+        {
+          nama: "Rumah Tongkonan",
+          coords: [-2.964, 119.869],
+          deskripsi: "Rumah adat Toraja dengan atap melengkung khas Sulawesi Selatan.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/Rumah-Tongkonan.jpg",
+        },
+        {
+          nama: "Tari Cakalele",
+          coords: [-3.42, 127.0],
+          deskripsi: "Tarian perang tradisional Maluku yang energik.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/cakalele.jpg",
+        },
+        {
+          nama: "Rumah Adat Honai",
+          coords: [-4.832, 137.3],
+          deskripsi: "Rumah adat Papua dengan bentuk bulat dan atap jerami.",
+          gambar: "img/honaiindex.jpeg",
+        },
+        {
+          nama: "Tari Tor-Tor",
+          coords: [2.92, 98.677],
+          deskripsi: "Tarian adat Batak dari Sumatera Utara dengan gerakan khas.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/tortor.jpg",
+        },
+        {
+          nama: "Tari Topeng Betawi",
+          coords: [-6.208, 106.845],
+          deskripsi: "Tarian Betawi menggunakan topeng dan gerakan lucu.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/topengbetawi.jpeg",
+        },
+        {
+          nama: "Rumah Adat Baileo",
+          coords: [-3.695, 128.183],
+          deskripsi: "Rumah adat Maluku dengan tiang tinggi dan ruang terbuka.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/baileo.jpg",
+        },
+        {
+          nama: "Tari Pinggan Dayak Mualang",
+          coords: [0.051, 109.347],
+          deskripsi: "Tarian hiburan dari Dayak Mualang di Kalimantan Barat, menggunakan piring (pinggan) sebagai atribut tarian.",
+          gambar: "https://raw.githubusercontent.com/ANTARTICA1/img/main/dayakmaulang.webp",
+        },
+      ];
+
+      budaya.forEach((item) => {
+        const marker = L.marker(item.coords).addTo(map);
+        marker.bindPopup(`
+      <h5>${item.nama}</h5>
+      <img src="${item.gambar}" alt="${item.nama}">
+      <p>${item.deskripsi}</p>
+    `);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <footer class="footer">
+      <p>© 2025 Budaya Indonesia. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

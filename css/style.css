@@ -1,0 +1,524 @@
+/* Nama: Anak Agung Ngurah Krisna Artha Wibawa
+Kelas: BB244
+NIM: 240040075 */
+
+html {
+  overflow-y: scroll;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f5f0;
+  color: #3a2f1f;
+}
+
+nav {
+  background-color: #5c3a21;
+  padding: 15px 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+.bg-brown {
+  background-color: #5c3a21 !important;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+
+.btn-gold {
+  background-color: #d4af37;
+  color: #5c3a21;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #b9982e;
+  color: #fff;
+}
+
+.navbar {
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.hero {
+  background-image: url("../img/heroindex.avif");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(92, 58, 33, 0.5);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-small-daftar {
+  height: 30vh;
+  background: url("../img/tarihero.jpg") center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+.hero-small-artikel {
+  height: 30vh;
+  background: url("../img/balihero.jpg") center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+.hero-small-peta {
+  height: 30vh;
+  background: url("../img/indopeta.jpeg") center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 0px 15px rgba(228, 100, 8, 0.452);
+}
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+}
+
+.leaflet-popup-content img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+.leaflet-popup-content h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.leaflet-popup-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.leaflet-popup-content p {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.article-header-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.article-container {
+  background: #fffdf9;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.article-container h2,
+.article-container h3 {
+  color: #5c3a21;
+}
+
+.article-container p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.article-container ul li {
+  margin-bottom: 10px;
+}
+
+.article-source {
+  font-size: 15px;
+  margin-top: 12px;
+  color: #6d6d6d;
+}
+
+.article-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.article-meta {
+  background-color: #f9f5f0;
+  border: 1px solid #e0d4c0;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #5c3a21;
+}
+
+.article-meta a {
+  color: #5c3a21;
+  text-decoration: underline;
+}
+
+.feature-card {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #fff8f0;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.feature-card img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-29px);
+  box-shadow: 0 10px 20px rgba(228, 100, 8, 0.452);
+}
+
+.feature-card h5 {
+  color: #5c3a21;
+  margin-bottom: 10px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  transform: scale(1);
+  box-shadow: 5px 15px 10px rgba(92, 58, 33, 0.151);
+}
+
+.card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 5px 15px 25px rgba(228, 100, 8, 0.452);
+}
+
+.card-title {
+  color: #5c3a21;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.indent {
+  text-indent: 2em;
+}
+
+.judul {
+  color: #bb7729 !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link.active {
+  color: #d4af37 !important;
+}
+
+.gallery-img {
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.detail-section-kecak {
+  position: relative;
+  background-image: url("../img/kecakdaftar.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.detail-section-honai {
+  position: relative;
+  background-image: url("../img/honaibg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.detail-section-rendang {
+  position: relative;
+  background-image: url("../img/detailrendang.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.detail-section-rambu {
+  position: relative;
+  background-image: url("../img/rambusolo.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.detail-section-ogoh {
+  position: relative;
+  background-image: url("../img/detailogoh.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.detail-section-reog {
+  position: relative;
+  background-image: url("../img/reogdaftar.webp");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.hero-small-galeri {
+  height: 30vh;
+  background: url("../img/bali2hero.jpg") center/cover no-repeat;
+  position: relative;
+  color: white;
+}
+
+.hero-small-galeri * {
+  position: relative;
+  z-index: 2;
+}
+
+.main-slider {
+  width: 100%;
+  max-width: 900px;
+  height: 480px;
+  margin: 0 auto 30px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.main-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbs {
+  max-width: 900px;
+  margin: auto;
+}
+
+.thumbs .swiper-slide {
+  height: auto !important;
+  padding-bottom: 12px;
+  opacity: 0.5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.thumbs img {
+  width: 100%;
+  height: 90px !important;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.bg-detail {
+  background-color: rgba(255, 251, 246, 0.8) !important;
+}
+
+.detail-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 25, 15, 0.6);
+  z-index: 0;
+}
+
+.detail-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.detail-section h2 {
+  color: #ffffff;
+}
+
+.detail-section img {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.detail-section ul {
+  padding-left: 20px;
+}
+
+.detail-section li {
+  margin-bottom: 8px;
+}
+
+/* Swiper */
+.mySwiper .swiper-slide {
+  position: relative;
+  z-index: 5 !important;
+  overflow: visible !important;
+}
+
+.mySwiper .swiper-slide img {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mySwiper .swiper-slide:hover img {
+  box-shadow: 10px 10px 15px rgba(228, 100, 8, 0.452);
+  transform: translateY(-5px);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #daa81e;
+}
+
+.article-feature {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  background: #fff8f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 20px rgba(92, 58, 33, 0.15);
+  transition: 0.35s ease;
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.article-feature:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.article-feature img {
+  width: 45%;
+  aspect-ratio: 4 / 3;
+  border-radius: 15px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.article-feature:hover img {
+  transform: scale(1.03);
+}
+
+/* Text area */
+.article-feature .content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .article-feature {
+    flex-direction: column;
+    transform: scale(1);
+  }
+
+  .article-feature img {
+    width: 100%;
+  }
+
+  .article-feature .content {
+    width: 100%;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer {
+  background: linear-gradient(90deg, #5c3a21, #8b5e3c);
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  max-width: 800px;
+  margin: 0;
+  padding: 0 15px;
+}

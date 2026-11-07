@@ -6,6 +6,13 @@ An educational web platform dedicated to cataloging, preserving, and presenting 
 
 Indonesia possesses exceptional ethnic and cultural diversity spanning over 17,000 islands. This portal organizes traditional performing arts, architecture, culinary traditions, and sacred ceremonies into an accessible, responsive digital repository designed for students, researchers, and cultural enthusiasts.
 
+## Media Previews
+
+### Indonesian Archipelago Cultural Map
+![Peta Budaya Indonesia](img/indopeta.jpeg)
+
+### Cultural Heritage Showcase
+![Kebudayaan Indonesia](img/balihero.jpg)
 ## Core Content and Modules
 
 - Home Portal (`index.html`): Engaging landing page introducing Indonesian cultural identity and featured cultural traditions.

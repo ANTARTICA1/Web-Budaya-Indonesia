@@ -9,10 +9,10 @@ Indonesia possesses exceptional ethnic and cultural diversity spanning over 17,0
 ## Media Previews
 
 ### Indonesian Archipelago Cultural Map
-![Peta Budaya Indonesia](img/indopeta.jpeg)
+![Indonesian Cultural Archipelago Map](img/indopeta.jpeg)
 
 ### Cultural Heritage Showcase
-![Kebudayaan Indonesia](img/balihero.jpg)
+![Indonesian Cultural Heritage](img/balihero.jpg)
 ## Core Content and Modules
 
 - Home Portal (`index.html`): Engaging landing page introducing Indonesian cultural identity and featured cultural traditions.

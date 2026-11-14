@@ -8,7 +8,15 @@ Indonesia possesses exceptional ethnic and cultural diversity spanning over 17,0
 
 ## Interface Preview
 
-[![Interface Preview Status](https://img.shields.io/badge/Interface_Preview-Documentation_in_Progress-2563eb?style=for-the-badge)](https://github.com/ANTARTICA1/Web-Budaya-Indonesia)
+### 1. Katalog & Direktori Budaya Nusantara (`daftar.html`)
+Tampilan direktori budaya interaktif yang menyajikan kartu-kartu tradisi daerah (seperti Ogoh-Ogoh Bali, Rendang Minangkabau, dan Reog Ponorogo) dilengkapi banner visual beresolusi tinggi dan navigasi kategori.
+
+![Katalog Budaya Nusantara](img/screenshots/budaya_katalog_daftar.jpg)
+
+### 2. Peta Interaktif Persebaran Budaya (`peta.html`)
+Pemetaan geografis interaktif yang menandai titik-titik persebaran warisan budaya di seluruh kepulauan Indonesia, dilengkapi pop-up interaktif detail tradisi (seperti Tari Kecak di Bali).
+
+![Peta Interaktif Kebudayaan Indonesia](img/screenshots/budaya_peta_interaktif.jpg)
 
 ## Core Content and Modules
 
